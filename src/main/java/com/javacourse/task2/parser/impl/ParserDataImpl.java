@@ -29,9 +29,7 @@ public class ParserDataImpl implements ParserData {
             int i=0;                    // в этом while парсим строку, если в строке хоть одно значение невалидно, то
             List<Double> list2 = new ArrayList<>(); //пропускаем всю строку. т.е валидные значения этой строки не добавляются
             while (i<lineAfterSplit.length) {      //в List, а переходим к след строке
-
-                //List<Double> list2 = new ArrayList<>(); //надо поместить до while
-
+                
                 String strForValid = lineAfterSplit[i];
                 if(strForValid.equals("")){i++; continue;}
 
