@@ -1,15 +1,11 @@
 package com.javacourse.task2.entity;
 
 public abstract class Shape {
-    long shapeID;
-    Object pointA;
-    Object pointB;
+    private long shapeID;
+    private CustomPoint pointA;
 
-
-    public Shape(Object pointA, Object pointB){
-        this.pointA = pointA;
-        this.pointB = pointB;
-        this.shapeID = shapeID;
+    public Shape() {
+        this.pointA = new CustomPoint(0.0, 0.0);
+        this.shapeID = 0;
     }
-
 }

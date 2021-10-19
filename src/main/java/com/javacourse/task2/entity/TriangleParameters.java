@@ -14,12 +14,15 @@ public class TriangleParameters {
     public void setPerimeter(double perimeter){
         this.perimeter = perimeter;
     }
+
     public double getArea(){
         return area;
     }
     public void setArea(double area){
         this.area = area;
     }
+
+
     @Override
     public boolean equals(Object o){
         if(this == o) return true;
@@ -36,10 +39,11 @@ public class TriangleParameters {
     }
     @Override
     public String toString() {
-        return "TriangleParameters{" +
-                "perimeter=" + perimeter +
-                ", area=" + area +
-                '}';
+        final StringBuilder triangleParameters = new StringBuilder("TriangleParameters{");
+        triangleParameters.append("perimeter = ").append(perimeter);
+        triangleParameters.append(", area = ").append(area);
+        triangleParameters.append("}");
+        return triangleParameters.toString();
     }
 }
 

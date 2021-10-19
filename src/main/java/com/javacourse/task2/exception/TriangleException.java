@@ -7,10 +7,10 @@ public class TriangleException extends Exception{
     public TriangleException(String message){
         super(message);
     }
-    public TriangleException(Exception e){
+    public TriangleException(Throwable e){
         super(e);
     }
-    public TriangleException(String message, Exception e){
+    public TriangleException(String message, Throwable e){
         super(message, e);
     }
 }

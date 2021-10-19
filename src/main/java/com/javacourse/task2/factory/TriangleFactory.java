@@ -12,9 +12,14 @@ import java.util.List;
 public class TriangleFactory {
     private static final Logger logger = LogManager.getLogger();
     private static final int AMOUNT_POINT = 6;
+    private static TriangleFactory instance;
 
     private TriangleFactory() {
+        instance = new TriangleFactory();
     }
+public static TriangleFactory getInstance(){
+        return instance;
+}
 
 public static Triangle createTriangle(List<Double> coordinates) throws TriangleException {
 
@@ -22,12 +27,12 @@ public static Triangle createTriangle(List<Double> coordinates) throws TriangleE
             logger.error("Not enough data");
             throw new TriangleException("Not enough data");
         }
-    CustomPoint firstPoint = new CustomPoint(coordinates.get(0),coordinates.get(1));
-    CustomPoint secondPoint = new CustomPoint(coordinates.get(2),coordinates.get(3));
-    CustomPoint thirdPoint = new CustomPoint(coordinates.get(4),coordinates.get(5));
+       CustomPoint firstPoint = new CustomPoint(coordinates.get(0),coordinates.get(1));
+       CustomPoint secondPoint = new CustomPoint(coordinates.get(2),coordinates.get(3));
+       CustomPoint thirdPoint = new CustomPoint(coordinates.get(4),coordinates.get(5));
     Triangle triangle = new Triangle(firstPoint, secondPoint, thirdPoint);
-    logger.info("Triangle is ready");
+    logger.info("Triangle is ready" + triangle);
 
     return triangle;
-}
+ }
 }

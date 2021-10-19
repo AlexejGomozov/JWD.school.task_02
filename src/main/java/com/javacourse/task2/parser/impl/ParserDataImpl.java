@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ParserDataImpl implements ParserData {
-    static Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger();
     private static final String REGEX_SPLIT = "\s";
 
     @Override
