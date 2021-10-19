@@ -17,8 +17,7 @@ public class AreaSpecification implements Specification {
     @Override
     public boolean specify(Triangle triangle){
        TriangleServiceImpl service = new TriangleServiceImpl();
-       double area = 0;
-          area = service.calculateArea(triangle);
+       double area = service.calculateArea(triangle);
        boolean result = area>= minArea && area <= maxArea;
        return result;
     }
