@@ -18,6 +18,7 @@ public class AreaSpecification implements Specification {
     public boolean specify(Triangle triangle){
        TriangleServiceImpl service = new TriangleServiceImpl();
        double area = service.calculateArea(triangle);
+
        boolean result = area>= minArea && area <= maxArea;
        return result;
     }

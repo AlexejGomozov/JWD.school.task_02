@@ -16,8 +16,8 @@ public class PerimeterSpecification implements Specification {
     @Override
     public boolean specify(Triangle triangle){
         TriangleServiceImpl service = new TriangleServiceImpl();
-        double perimeter = 0;
-        perimeter = service.calculatePerimeter(triangle);
+        double perimeter = service.calculatePerimeter(triangle);
+
         boolean result = perimeter >= minPerimeter && perimeter <= maxPerimeter;
         return result;
     }
