@@ -28,8 +28,8 @@ public class TriangleParameters {
         if(this == o) return true;
         if(this == null || this.getClass()!=o.getClass()) return false;
         TriangleParameters that = (TriangleParameters) o;
-        return Double.compare(that.perimeter,((TriangleParameters) o).perimeter)==0 &&
-                Double.compare(that.area,((TriangleParameters) o).area)==0;
+        return Double.compare(that.perimeter, perimeter)==0 &&
+                Double.compare(that.area, area)==0;
     }
     public int hashcode(){
         int result = 1;
