@@ -11,15 +11,15 @@ import java.util.stream.Collectors;
 
 
 public class Repository {
-    private final static Logger logger = LogManager.getLogger();
+    static final Logger logger = LogManager.getLogger();
     private static Repository instance;
     List<Triangle> triangles ;
 
   private Repository(){
     triangles = new ArrayList<>();
-    instance = new Repository();
-  }
+}
     public static Repository getInstance(){
+      instance = new Repository();
       logger.info("New repository is ready");
     return instance;
     }
@@ -45,6 +45,9 @@ public class Repository {
     public boolean removeAll(List<Triangle> triangleList){
         return triangles.removeAll(triangleList);
     }
+
+  public void addToRep(Triangle triangle){ triangles.add(triangle);
+  }
 
     public List<Triangle> query(Specification specification){
       return triangles

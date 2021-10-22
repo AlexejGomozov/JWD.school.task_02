@@ -1,9 +1,12 @@
 package com.javacourse.task2.entity;
+import com.javacourse.task2.exception.TriangleException;
 import com.javacourse.task2.observer.Observer;
 import com.javacourse.task2.observer.TriangleEvent;
 
+import com.javacourse.task2.observer.impl.TriangleObserverImpl;
 import com.javacourse.task2.util.IdGenerator;
 import com.javacourse.task2.observer.Observable;
+import com.javacourse.task2.validation.impl.ValidatorDataImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,19 +14,19 @@ import java.util.ArrayList;
 
 
 public class Triangle extends Shape implements Observable {
-    Logger logger = LogManager.getLogger();
+    static final Logger logger = LogManager.getLogger();
 
-    private static final long triangleId;
+    private long triangleId;
     private CustomPoint pointA ;
     private CustomPoint pointB ;
     private CustomPoint pointC ;
     private ArrayList<Observer> observers = new ArrayList<>();
 
-    static {
+    {
     triangleId = IdGenerator.generate();
     }
 
-    public Triangle(CustomPoint pointA, CustomPoint pointB, CustomPoint pointC){
+    public Triangle(CustomPoint pointA, CustomPoint pointB, CustomPoint pointC) throws TriangleException {
         this.pointA = pointA;
         this.pointB = pointB;
         this.pointC = pointC;
@@ -31,6 +34,7 @@ public class Triangle extends Shape implements Observable {
     public long getTriangleId(){
         return triangleId;
     }
+
     public CustomPoint getPointA() {
         return pointA;
     }
@@ -41,6 +45,7 @@ public class Triangle extends Shape implements Observable {
     public CustomPoint getPointB(){
         return pointB;
     }
+
     public void setPointB(CustomPoint pointB){
         this.pointB = pointB;
         notifyObservers();
@@ -60,7 +65,7 @@ public class Triangle extends Shape implements Observable {
     }
     @Override
     public void detach(Observer observer){
-       this.observers = null;   //observers.remove(observer)
+       observers.remove(observer);
     }
     @Override
     public void notifyObservers(){

@@ -11,13 +11,13 @@ import java.util.Arrays;
 
 public class TriangleServiceImpl implements TriangleService {
     static Logger logger = LogManager.getLogger();
-
+     //public double perimeter;
 @Override
 public double calculatePerimeter(Triangle triangle){
        double[] sides = calculateTriangleSide(triangle);
        double perimeter = 0;
        for(double s: sides){perimeter +=s;}
-    logger.info("Perimetr of " + triangle + " is: " + perimeter);
+    logger.info("Perimeter of " + triangle + " is: " + perimeter);
     return perimeter;
 }
 @Override
@@ -41,16 +41,16 @@ public boolean rightTriangle(Triangle triangle){
 }
 
     public double calculateSide(CustomPoint pointA, CustomPoint pointB) {
-        double side = Math.sqrt(Math.pow((pointB.getPointAxisX() - pointA.getPointAxisX()), 2) +
-                Math.pow(pointB.getPointAxisY() - pointA.getPointAxisX(), 2));
-        return side;
+        return  Math.sqrt(Math.pow(pointB.getPointAxisX() - pointA.getPointAxisX(), 2) +
+                Math.pow(pointB.getPointAxisY() - pointA.getPointAxisY(), 2));
+
     }
 
     public double[] calculateTriangleSide(Triangle triangle) {
         double sideAB = calculateSide(triangle.getPointA(), triangle.getPointB());
         double sideBC = calculateSide(triangle.getPointB(), triangle.getPointC());
         double sideAC = calculateSide(triangle.getPointA(), triangle.getPointC());
-        logger.info("SideAB is: " + sideAB+ ", SideBC is: " + sideAC+ ", SideAC is: " + sideAC );
+        logger.info("SideAB is: " + sideAB+ ", SideBC is: " + sideBC+ ", SideAC is: " + sideAC );
 
         return new double[]{sideAB, sideBC, sideAC};
     }

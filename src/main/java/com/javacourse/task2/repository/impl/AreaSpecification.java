@@ -7,8 +7,8 @@ import com.javacourse.task2.service.impl.TriangleServiceImpl;
 
 public class AreaSpecification implements Specification {
 
-    double minArea;
-    double maxArea;
+   private double minArea;
+   private double maxArea;
 
     public AreaSpecification(double minArea, double maxArea){
         this.minArea = minArea;

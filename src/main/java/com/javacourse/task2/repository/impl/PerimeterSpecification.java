@@ -6,19 +6,19 @@ import com.javacourse.task2.service.impl.TriangleServiceImpl;
 
 public class PerimeterSpecification implements Specification {
 
-    private double minPerimeter;
-    private double maxPerimeter;
+    private double fromPerimeter;
+    private double toPerimeter;
 
-    public PerimeterSpecification( double minPerimeter, double maxPerimeter){
-        this.minPerimeter = minPerimeter;
-        this.maxPerimeter = maxPerimeter;
+    public PerimeterSpecification( double fromPerimeter, double toPerimeter){
+        this.fromPerimeter = fromPerimeter;
+        this.toPerimeter = toPerimeter;
     }
     @Override
     public boolean specify(Triangle triangle){
         TriangleServiceImpl service = new TriangleServiceImpl();
         double perimeter = service.calculatePerimeter(triangle);
 
-        boolean result = perimeter >= minPerimeter && perimeter <= maxPerimeter;
+        boolean result = perimeter >= fromPerimeter && perimeter <= toPerimeter;
         return result;
     }
 }

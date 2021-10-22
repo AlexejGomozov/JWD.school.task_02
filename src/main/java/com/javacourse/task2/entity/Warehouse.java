@@ -2,31 +2,47 @@ package com.javacourse.task2.entity;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.javacourse.task2.service.impl.TriangleServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Warehouse {
     private static Logger logger= LogManager.getLogger();
-    private Map<Long,TriangleParameters> triangleMap;
     private static Warehouse instanse;
+    private Map<Long,TriangleParameters> triangleMap;
+
 
     private Warehouse(){
         this.triangleMap = new HashMap<>();
-        instanse = new Warehouse();
     }
     public static Warehouse getInstance(){
+        instanse = new Warehouse();
         return instanse;
     }
-    public void putParameters(Long triangleId, TriangleParameters parameters){
-        logger.info("Changed parameters in " + triangleId);
-        triangleMap.put(triangleId,parameters);
+
+    public void putParameters(Long triangleId, TriangleParameters value){
+        logger.info("Put parameters " + value + " in " + triangleId + " triangle");
+        triangleMap.put(triangleId,value);
     }
     public void removeParameters(Long triangleId){
         logger.info(triangleId + " - removed");
         triangleMap.remove(triangleId);
     }
     public TriangleParameters getParameters(Long triangleId){
-        TriangleParameters parameters = triangleMap.get(triangleId);
-        return parameters;
+        return triangleMap.get(triangleId);
     }
+    public Map<Long, TriangleParameters> getTriangles(){
+        return Map.copyOf(triangleMap);
+    }
+
+    public void addToWarehouse(Triangle triangle){
+
+        TriangleServiceImpl service = new TriangleServiceImpl();
+
+            double perimeter = service.calculatePerimeter(triangle);
+            double area = service.calculateArea(triangle);
+        TriangleParameters  parameters = new TriangleParameters(perimeter, area);
+            putParameters(triangle.getTriangleId(),parameters);
+        }
 }

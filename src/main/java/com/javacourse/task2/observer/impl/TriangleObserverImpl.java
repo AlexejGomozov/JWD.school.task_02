@@ -12,18 +12,19 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
  public class TriangleObserverImpl implements Observer {
-    private final static Logger logger = LogManager.getLogger();
+    static final Logger logger = LogManager.getLogger();
 
     @Override
     public void updatePerimeter(TriangleEvent triangleEvent){
         Triangle triangle = triangleEvent.getSource();
         long id = triangle.getTriangleId();
         Warehouse warehouse = Warehouse.getInstance();
+
         try{
-            TriangleParameters parameters = warehouse.getParameters(id);
+        TriangleParameters parameters = warehouse.getParameters(id);
             TriangleService service = new TriangleServiceImpl();
             double perimeter = service.calculatePerimeter(triangle);
-            parameters.setPerimeter(perimeter);
+             parameters.setPerimeter(perimeter);
             logger.info("Perimeter was changed", perimeter);
         }catch(TriangleException e){
     logger.error("Exception occurs while executing the method updatePerimetr", e.getMessage());
