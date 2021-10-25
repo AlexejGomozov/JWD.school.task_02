@@ -1,6 +1,11 @@
 package com.javacourse.task2.entity;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class TriangleParameters {
+    static final Logger logger = LogManager.getLogger();
+
     private double perimeter;
     private double area;
 
@@ -21,7 +26,6 @@ public class TriangleParameters {
     public void setArea(double area){
         this.area = area;
     }
-
 
     @Override
     public boolean equals(Object o){

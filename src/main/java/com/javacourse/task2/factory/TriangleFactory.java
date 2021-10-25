@@ -57,10 +57,8 @@ public class TriangleFactory {
             Triangle triangle = new Triangle(firstPoint, secondPoint, thirdPoint);
             listTriangle.add(triangle);
         }
-
    return listTriangle;
-            }
-
-        }
+    }
+}
 
 

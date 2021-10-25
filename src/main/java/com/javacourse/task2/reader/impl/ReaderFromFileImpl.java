@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ReaderFromFileImpl implements ReaderFromFile {
-    static Logger logger = LogManager.getLogger();
+    static final Logger logger = LogManager.getLogger();
 
     @Override
     public List<String> read(String fileName) throws TriangleException {

@@ -3,15 +3,12 @@ import com.javacourse.task2.exception.TriangleException;
 import com.javacourse.task2.observer.Observer;
 import com.javacourse.task2.observer.TriangleEvent;
 
-import com.javacourse.task2.observer.impl.TriangleObserverImpl;
 import com.javacourse.task2.util.IdGenerator;
 import com.javacourse.task2.observer.Observable;
-import com.javacourse.task2.validation.impl.ValidatorDataImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
-
 
 public class Triangle extends Shape implements Observable {
     static final Logger logger = LogManager.getLogger();
@@ -31,6 +28,7 @@ public class Triangle extends Shape implements Observable {
         this.pointB = pointB;
         this.pointC = pointC;
     }
+
     public long getTriangleId(){
         return triangleId;
     }

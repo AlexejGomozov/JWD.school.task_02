@@ -12,14 +12,14 @@ import java.util.stream.Collectors;
 
 public class Repository {
     static final Logger logger = LogManager.getLogger();
-    private static Repository instance;
+    private static Repository instance; // = new Repository();
     List<Triangle> triangles ;
 
   private Repository(){
     triangles = new ArrayList<>();
 }
     public static Repository getInstance(){
-      instance = new Repository();
+        if (instance == null) instance =  new Repository();
       logger.info("New repository is ready");
     return instance;
     }

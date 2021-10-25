@@ -9,8 +9,6 @@ import java.util.List;
 
 public class ParserTest {
 
-
-
     List<String> actualStr = Arrays.asList("1  3", "2  6", "2 3 4 sofas 2", "3 3 4 ", "2   7");
     List<Double> expected = Arrays.asList(1.0, 3.0, 2.0, 6.0, 3.0, 3.0, 4.0, 2.0, 7.0);
 

@@ -3,8 +3,8 @@
     <Properties>
         <!--Here has made pattern for Appenders format string and VARs for configuration-->
         <property name="LOG_FOLDER">logs</property>
-        <property name="pattern_cmd">%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{5} - %m%n</property>
-        <property name="pattern_file">%d{yyyy-MM-dd HH:mm:ss} [%t] [%M] [%L] %-5level %logger{5} - %m%n</property>
+        <property name="pattern_cmd"> [%t] %-1level %logger{1} - %m%n</property>
+        <property name="pattern_file"> [%t] [%M] [%L] %-1level %logger{1} - %m%n</property>
     </Properties>
     <Appenders>
         <!--Appender for printing log in console-->

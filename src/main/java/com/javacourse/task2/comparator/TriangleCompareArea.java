@@ -4,12 +4,8 @@ import com.javacourse.task2.entity.Triangle;
 import java.util.Comparator;
 
 import com.javacourse.task2.service.impl.TriangleServiceImpl;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 
 public class TriangleCompareArea implements Comparator<Triangle> {
-    private static final Logger logger = LogManager.getLogger();
     @Override
             public int compare(Triangle o1, Triangle o2)  {
         TriangleServiceImpl service = new TriangleServiceImpl();

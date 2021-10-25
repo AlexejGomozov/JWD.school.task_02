@@ -4,7 +4,6 @@ public class CustomPoint {
     private double pointAxisX;
     private double pointAxisY;
 
-
     public CustomPoint(double pointAxisX, double pointAxisY) {
         this.pointAxisX = pointAxisX;
         this.pointAxisY = pointAxisY;

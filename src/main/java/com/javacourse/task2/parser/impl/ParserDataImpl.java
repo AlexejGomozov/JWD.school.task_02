@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ParserDataImpl implements ParserData {
-    private static final Logger logger = LogManager.getLogger();
+    static final Logger logger = LogManager.getLogger();
     private static final String REGEX_SPLIT = "\s";
 
     @Override
@@ -24,7 +24,7 @@ public class ParserDataImpl implements ParserData {
           String line = iterator.next();
             String[] lineAfterSplit = line.split(REGEX_SPLIT);
 
-            int i=0;                                         // в этом while парсим строку, если в строке хоть одно значение невалидно, то
+            int i=0;
             List<Double> listCoordLokal = new ArrayList<>(); //пропускаем всю строку. т.е валидные значения этой строки не добавляются
             while (i<lineAfterSplit.length) {               //в List, а переходим к след строке
 

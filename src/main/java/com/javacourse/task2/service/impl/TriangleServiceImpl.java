@@ -10,14 +10,14 @@ import java.util.Arrays;
 
 
 public class TriangleServiceImpl implements TriangleService {
-    static Logger logger = LogManager.getLogger();
-     //public double perimeter;
+    static final Logger logger = LogManager.getLogger();
+
 @Override
 public double calculatePerimeter(Triangle triangle){
        double[] sides = calculateTriangleSide(triangle);
        double perimeter = 0;
        for(double s: sides){perimeter +=s;}
-    logger.info("Perimeter of " + triangle + " is: " + perimeter);
+    logger.info("Perimeter of " + triangle.getTriangleId() + " is: " + perimeter);
     return perimeter;
 }
 @Override
@@ -27,7 +27,7 @@ public double calculateArea(Triangle triangle)  {
             Math.sqrt(halfPerimeter*(halfPerimeter - calculateTriangleSide(triangle)[0])*
             (halfPerimeter - calculateTriangleSide(triangle)[1])*
             (halfPerimeter - calculateTriangleSide(triangle)[2]));
-    logger.info("Area of " + triangle + " is: " + areaByHeronFormula);
+    logger.info("Area of " + triangle.getTriangleId() + " is: " + areaByHeronFormula);
     return areaByHeronFormula;
 }
 @Override
@@ -36,7 +36,7 @@ public boolean rightTriangle(Triangle triangle){
           Arrays.sort(sides);
           boolean rightTriangleByPythagor = Math.pow(sides[0],2) + Math.pow(sides[1],2)==Math.pow(sides[2],2);
     logger.info(rightTriangleByPythagor ?"Triangle " +
-           triangle + " is right." : "Triangle " + triangle+ "isn't right");
+           triangle + " is right." : "Triangle " + triangle.getTriangleId()+ "isn't right");
     return rightTriangleByPythagor;
 }
 
@@ -50,7 +50,6 @@ public boolean rightTriangle(Triangle triangle){
         double sideAB = calculateSide(triangle.getPointA(), triangle.getPointB());
         double sideBC = calculateSide(triangle.getPointB(), triangle.getPointC());
         double sideAC = calculateSide(triangle.getPointA(), triangle.getPointC());
-        logger.info("SideAB is: " + sideAB+ ", SideBC is: " + sideBC+ ", SideAC is: " + sideAC );
 
         return new double[]{sideAB, sideBC, sideAC};
     }

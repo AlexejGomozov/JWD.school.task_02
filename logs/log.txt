@@ -1,44 +1,41 @@
-2021-10-22 05:36:13 [main] [parseDataList] [45] INFO  javacourse.task2.parser.impl.ParserDataImpl - List<Double> after parse [2.0, 1.0, 2.0, 6.0, 8.0, 1.0, 3.0, 2.0, 3.0, 6.0, 8.0, 2.0, 3.5, 2.5, 3.5, 5.5, 7.5, 2.5]
-2021-10-22 05:36:13 [main] [main] [35] INFO  com.javacourse.task2.main.Main - [Triangle{triangleId = 1, pointA = {pointAxisX = 2.0, pointAxisY = 1.0}, pointB = {pointAxisX = 2.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 1.0}}, Triangle{triangleId = 2, pointA = {pointAxisX = 3.0, pointAxisY = 2.0}, pointB = {pointAxisX = 3.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 2.0}}, Triangle{triangleId = 3, pointA = {pointAxisX = 3.5, pointAxisY = 2.5}, pointB = {pointAxisX = 3.5, pointAxisY = 5.5}, pointC = {pointAxisX = 7.5, pointAxisY = 2.5}}]
-2021-10-22 05:36:13 [main] [getInstance] [24] INFO  com.javacourse.task2.repository.Repository - New repository is ready
-2021-10-22 05:36:13 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 5.0, SideBC is: 7.810249675906654, SideAC is: 6.0
-2021-10-22 05:36:13 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 5.0, SideBC is: 7.810249675906654, SideAC is: 6.0
-2021-10-22 05:36:13 [main] [calculatePerimeter] [20] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Perimeter of Triangle{triangleId = 1, pointA = {pointAxisX = 2.0, pointAxisY = 1.0}, pointB = {pointAxisX = 2.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 1.0}} is: 18.810249675906654
-2021-10-22 05:36:13 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 5.0, SideBC is: 7.810249675906654, SideAC is: 6.0
-2021-10-22 05:36:13 [main] [calculatePerimeter] [20] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Perimeter of Triangle{triangleId = 1, pointA = {pointAxisX = 2.0, pointAxisY = 1.0}, pointB = {pointAxisX = 2.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 1.0}} is: 18.810249675906654
-2021-10-22 05:36:13 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 5.0, SideBC is: 7.810249675906654, SideAC is: 6.0
-2021-10-22 05:36:13 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 5.0, SideBC is: 7.810249675906654, SideAC is: 6.0
-2021-10-22 05:36:13 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 5.0, SideBC is: 7.810249675906654, SideAC is: 6.0
-2021-10-22 05:36:13 [main] [calculateArea] [30] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Area of Triangle{triangleId = 1, pointA = {pointAxisX = 2.0, pointAxisY = 1.0}, pointB = {pointAxisX = 2.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 1.0}} is: 15.0
-2021-10-22 05:36:13 [main] [putParameters] [25] INFO  com.javacourse.task2.entity.Warehouse - Put parameters TriangleParameters{perimeter = 18.810249675906654, area = 15.0} in 1 triangle
-2021-10-22 05:36:13 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 4.0, SideBC is: 6.4031242374328485, SideAC is: 5.0
-2021-10-22 05:36:13 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 4.0, SideBC is: 6.4031242374328485, SideAC is: 5.0
-2021-10-22 05:36:13 [main] [calculatePerimeter] [20] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Perimeter of Triangle{triangleId = 2, pointA = {pointAxisX = 3.0, pointAxisY = 2.0}, pointB = {pointAxisX = 3.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 2.0}} is: 15.403124237432849
-2021-10-22 05:36:13 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 4.0, SideBC is: 6.4031242374328485, SideAC is: 5.0
-2021-10-22 05:36:14 [main] [calculatePerimeter] [20] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Perimeter of Triangle{triangleId = 2, pointA = {pointAxisX = 3.0, pointAxisY = 2.0}, pointB = {pointAxisX = 3.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 2.0}} is: 15.403124237432849
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 4.0, SideBC is: 6.4031242374328485, SideAC is: 5.0
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 4.0, SideBC is: 6.4031242374328485, SideAC is: 5.0
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 4.0, SideBC is: 6.4031242374328485, SideAC is: 5.0
-2021-10-22 05:36:14 [main] [calculateArea] [30] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Area of Triangle{triangleId = 2, pointA = {pointAxisX = 3.0, pointAxisY = 2.0}, pointB = {pointAxisX = 3.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 2.0}} is: 10.0
-2021-10-22 05:36:14 [main] [putParameters] [25] INFO  com.javacourse.task2.entity.Warehouse - Put parameters TriangleParameters{perimeter = 15.403124237432849, area = 10.0} in 2 triangle
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 3.0, SideBC is: 5.0, SideAC is: 4.0
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 3.0, SideBC is: 5.0, SideAC is: 4.0
-2021-10-22 05:36:14 [main] [calculatePerimeter] [20] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Perimeter of Triangle{triangleId = 3, pointA = {pointAxisX = 3.5, pointAxisY = 2.5}, pointB = {pointAxisX = 3.5, pointAxisY = 5.5}, pointC = {pointAxisX = 7.5, pointAxisY = 2.5}} is: 12.0
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 3.0, SideBC is: 5.0, SideAC is: 4.0
-2021-10-22 05:36:14 [main] [calculatePerimeter] [20] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Perimeter of Triangle{triangleId = 3, pointA = {pointAxisX = 3.5, pointAxisY = 2.5}, pointB = {pointAxisX = 3.5, pointAxisY = 5.5}, pointC = {pointAxisX = 7.5, pointAxisY = 2.5}} is: 12.0
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 3.0, SideBC is: 5.0, SideAC is: 4.0
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 3.0, SideBC is: 5.0, SideAC is: 4.0
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 3.0, SideBC is: 5.0, SideAC is: 4.0
-2021-10-22 05:36:14 [main] [calculateArea] [30] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Area of Triangle{triangleId = 3, pointA = {pointAxisX = 3.5, pointAxisY = 2.5}, pointB = {pointAxisX = 3.5, pointAxisY = 5.5}, pointC = {pointAxisX = 7.5, pointAxisY = 2.5}} is: 6.0
-2021-10-22 05:36:14 [main] [putParameters] [25] INFO  com.javacourse.task2.entity.Warehouse - Put parameters TriangleParameters{perimeter = 12.0, area = 6.0} in 3 triangle
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 5.0, SideBC is: 7.810249675906654, SideAC is: 6.0
-2021-10-22 05:36:14 [main] [calculatePerimeter] [20] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Perimeter of Triangle{triangleId = 1, pointA = {pointAxisX = 2.0, pointAxisY = 1.0}, pointB = {pointAxisX = 2.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 1.0}} is: 18.810249675906654
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 4.0, SideBC is: 6.4031242374328485, SideAC is: 5.0
-2021-10-22 05:36:14 [main] [calculatePerimeter] [20] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Perimeter of Triangle{triangleId = 2, pointA = {pointAxisX = 3.0, pointAxisY = 2.0}, pointB = {pointAxisX = 3.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 2.0}} is: 15.403124237432849
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 3.0, SideBC is: 5.0, SideAC is: 4.0
-2021-10-22 05:36:14 [main] [calculatePerimeter] [20] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Perimeter of Triangle{triangleId = 3, pointA = {pointAxisX = 3.5, pointAxisY = 2.5}, pointB = {pointAxisX = 3.5, pointAxisY = 5.5}, pointC = {pointAxisX = 7.5, pointAxisY = 2.5}} is: 12.0
-2021-10-22 05:36:14 [main] [main] [51] INFO  com.javacourse.task2.main.Main - Triangles after Perimeter's specification: [Triangle{triangleId = 2, pointA = {pointAxisX = 3.0, pointAxisY = 2.0}, pointB = {pointAxisX = 3.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 2.0}}, Triangle{triangleId = 3, pointA = {pointAxisX = 3.5, pointAxisY = 2.5}, pointB = {pointAxisX = 3.5, pointAxisY = 5.5}, pointC = {pointAxisX = 7.5, pointAxisY = 2.5}}]
-2021-10-22 05:36:14 [main] [main] [55] INFO  com.javacourse.task2.main.Main - Selected Triangle by index from repository: Triangle{triangleId = 1, pointA = {pointAxisX = 2.0, pointAxisY = 1.0}, pointB = {pointAxisX = 2.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 1.0}}
-2021-10-22 05:36:14 [main] [main] [56] INFO  com.javacourse.task2.main.Main - Selected Parameters of Triangle by ID from warehouse: TriangleParameters{perimeter = 18.810249675906654, area = 15.0}
-2021-10-22 05:36:14 [main] [calculateTriangleSide] [53] INFO  javacourse.task2.service.impl.TriangleServiceImpl - SideAB is: 2.0, SideBC is: 7.810249675906654, SideAC is: 6.708203932499369
-2021-10-22 05:36:14 [main] [calculatePerimeter] [20] INFO  javacourse.task2.service.impl.TriangleServiceImpl - Perimeter of Triangle{triangleId = 1, pointA = {pointAxisX = 2.0, pointAxisY = 4.0}, pointB = {pointAxisX = 2.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 1.0}} is: 16.518453608406023
+[main] [parseDataList] [42] INFO ParserDataImpl - List<Double> after parse [2.0, 1.0, 2.0, 6.0, 8.0, 1.0, 3.0, 2.0, 3.0, 6.0, 8.0, 2.0, 3.5, 2.5, 3.5, 5.5, 7.5, 2.5]
+[main] [main] [34] INFO Main - [Triangle{triangleId = 1, pointA = {pointAxisX = 2.0, pointAxisY = 1.0}, pointB = {pointAxisX = 2.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 1.0}}, Triangle{triangleId = 2, pointA = {pointAxisX = 3.0, pointAxisY = 2.0}, pointB = {pointAxisX = 3.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 2.0}}, Triangle{triangleId = 3, pointA = {pointAxisX = 3.5, pointAxisY = 2.5}, pointB = {pointAxisX = 3.5, pointAxisY = 5.5}, pointC = {pointAxisX = 7.5, pointAxisY = 2.5}}]
+[main] [getInstance] [23] INFO Repository - New repository is ready
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 1 is: 18.810249675906654
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 1 is: 18.810249675906654
+[main] [calculateArea] [30] INFO TriangleServiceImpl - Area of 1 is: 15.0
+[main] [putParameters] [23] INFO Warehouse - Put parameters TriangleParameters{perimeter = 18.810249675906654, area = 15.0} in 1 triangle
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 2 is: 15.403124237432849
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 2 is: 15.403124237432849
+[main] [calculateArea] [30] INFO TriangleServiceImpl - Area of 2 is: 10.0
+[main] [putParameters] [23] INFO Warehouse - Put parameters TriangleParameters{perimeter = 15.403124237432849, area = 10.0} in 2 triangle
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 3 is: 12.0
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 3 is: 12.0
+[main] [calculateArea] [30] INFO TriangleServiceImpl - Area of 3 is: 6.0
+[main] [putParameters] [23] INFO Warehouse - Put parameters TriangleParameters{perimeter = 12.0, area = 6.0} in 3 triangle
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 1 is: 18.810249675906654
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 2 is: 15.403124237432849
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 3 is: 12.0
+[main] [main] [53] INFO Main - Triangles after Perimeter's specification: [Triangle{triangleId = 2, pointA = {pointAxisX = 3.0, pointAxisY = 2.0}, pointB = {pointAxisX = 3.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 2.0}}, Triangle{triangleId = 3, pointA = {pointAxisX = 3.5, pointAxisY = 2.5}, pointB = {pointAxisX = 3.5, pointAxisY = 5.5}, pointC = {pointAxisX = 7.5, pointAxisY = 2.5}}]
+[main] [main] [57] INFO Main - Selected Triangle by index from repository: Triangle{triangleId = 1, pointA = {pointAxisX = 2.0, pointAxisY = 1.0}, pointB = {pointAxisX = 2.0, pointAxisY = 6.0}, pointC = {pointAxisX = 8.0, pointAxisY = 1.0}}
+[main] [main] [58] INFO Main - Selected Parameters of Triangle by ID from warehouse: TriangleParameters{perimeter = 18.810249675906654, area = 15.0}
+[main] [main] [59] INFO Main -   WAREHOUSE is : {1=TriangleParameters{perimeter = 18.810249675906654, area = 15.0}, 3=TriangleParameters{perimeter = 12.0, area = 6.0}, 2=TriangleParameters{perimeter = 15.403124237432849, area = 10.0}}
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 1 is: 16.518453608406023
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 1 is: 16.518453608406023
+[main] [calculateArea] [30] INFO TriangleServiceImpl - Area of 1 is: 6.000000000000001
+[main] [updateArea] [45] INFO TriangleObserverImpl - Area was changed
+[main] [main] [63] INFO Main - PointA of triangle 1 was changed.
+[main] [main] [65] INFO Main - Selected Parameters of Triangle by ID from warehouse after change: TriangleParameters{perimeter = 16.518453608406023, area = 6.000000000000001}
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 1 is: 21.105879816893655
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 1 is: 21.105879816893655
+[main] [calculateArea] [30] INFO TriangleServiceImpl - Area of 1 is: 7.499999999999995
+[main] [updateArea] [45] INFO TriangleObserverImpl - Area was changed
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 3 is: 17.554314395199903
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 3 is: 17.554314395199903
+[main] [calculateArea] [30] INFO TriangleServiceImpl - Area of 3 is: 2.2499999999999787
+[main] [updateArea] [45] INFO TriangleObserverImpl - Area was changed
+[main] [main] [72] INFO Main -  CHECK  WAREHOUSE after change pointA : {1=TriangleParameters{perimeter = 21.105879816893655, area = 7.499999999999995}, 3=TriangleParameters{perimeter = 17.554314395199903, area = 2.2499999999999787}, 2=TriangleParameters{perimeter = 15.403124237432849, area = 10.0}}
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 1 is: 21.105879816893655
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 2 is: 18.99938302965783
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 2 is: 18.99938302965783
+[main] [calculatePerimeter] [20] INFO TriangleServiceImpl - Perimeter of 3 is: 17.554314395199903

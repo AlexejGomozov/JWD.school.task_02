@@ -24,8 +24,9 @@ import org.apache.logging.log4j.Logger;
         TriangleParameters parameters = warehouse.getParameters(id);
             TriangleService service = new TriangleServiceImpl();
             double perimeter = service.calculatePerimeter(triangle);
+
              parameters.setPerimeter(perimeter);
-            logger.info("Perimeter was changed", perimeter);
+
         }catch(TriangleException e){
     logger.error("Exception occurs while executing the method updatePerimetr", e.getMessage());
         }

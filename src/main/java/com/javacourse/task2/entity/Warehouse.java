@@ -8,19 +8,17 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Warehouse {
-    private static Logger logger= LogManager.getLogger();
-    private static Warehouse instanse;
+    static Logger logger= LogManager.getLogger();
+    private static Warehouse instance;
     private Map<Long,TriangleParameters> triangleMap;
-
 
     private Warehouse(){
         this.triangleMap = new HashMap<>();
     }
     public static Warehouse getInstance(){
-        instanse = new Warehouse();
-        return instanse;
+        if (instance == null) instance = new Warehouse();
+        return instance;
     }
-
     public void putParameters(Long triangleId, TriangleParameters value){
         logger.info("Put parameters " + value + " in " + triangleId + " triangle");
         triangleMap.put(triangleId,value);

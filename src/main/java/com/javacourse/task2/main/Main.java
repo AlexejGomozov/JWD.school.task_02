@@ -1,5 +1,6 @@
 package com.javacourse.task2.main;
 
+import com.javacourse.task2.comparator.TriangleComparePerimeter;
 import com.javacourse.task2.entity.CustomPoint;
 import com.javacourse.task2.entity.Triangle;
 import com.javacourse.task2.entity.TriangleParameters;
@@ -7,18 +8,16 @@ import com.javacourse.task2.entity.Warehouse;
 import com.javacourse.task2.exception.TriangleException;
 
 import com.javacourse.task2.factory.TriangleFactory;
-import com.javacourse.task2.observer.Observable;
 import com.javacourse.task2.observer.Observer;
 import com.javacourse.task2.observer.impl.TriangleObserverImpl;
 import com.javacourse.task2.parser.impl.ParserDataImpl;
 import com.javacourse.task2.reader.impl.ReaderFromFileImpl;
 import com.javacourse.task2.repository.Repository;
 import com.javacourse.task2.repository.impl.PerimeterSpecification;
+
 import com.javacourse.task2.validation.impl.ValidatorDataImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -41,8 +40,11 @@ public class Main {
 
         for(Triangle triangle : triangles) {
             if (ValidatorDataImpl.getInstance().validTriangle(triangle)) {
-           triangle.attach(observer);
-                repository.addToRep(triangle);
+                 triangle.attach(observer);
+                if (triangle.getTriangleId()==2) {
+                    triangle.detach(observer);
+                }
+               repository.addToRep(triangle);
                 warehouse.addToWarehouse(triangle);
             }
         }
@@ -54,13 +56,25 @@ public class Main {
         TriangleParameters selectedTriangleParamFromWareh = warehouse.getParameters(selectedTriangleFromRep.getTriangleId());
         logger.info("Selected Triangle by index from repository: " + selectedTriangleFromRep);
         logger.info("Selected Parameters of Triangle by ID from warehouse: "+ selectedTriangleParamFromWareh);
-
+        logger.info("  WAREHOUSE is : " + warehouse.getTriangles() );
 
         selectedTriangleFromRep.setPointA(new CustomPoint(2.0,4.0));
 
-       // logger.info("PointA of triangle " + selectedTriangleFromRep.getTriangleId() + " was changed.");
-//       TriangleParameters selectedTriangleParamFromWarehAfterChange = warehouse.getParameters(selectedTriangleFromRep.getTriangleId());
-//    logger.info("Selected Parameters of Triangle by ID from warehouse after change: " +
-//            selectedTriangleParamFromWarehAfterChange);
+        logger.info("PointA of triangle " + selectedTriangleFromRep.getTriangleId() + " was changed.");
+       TriangleParameters selectedTriangleParamFromWarehAfterChange = warehouse.getParameters(selectedTriangleFromRep.getTriangleId());
+    logger.info("Selected Parameters of Triangle by ID from warehouse after change: " +
+            selectedTriangleParamFromWarehAfterChange);
+
+        for(Triangle triangle : triangles) {
+            triangle.setPointA(new CustomPoint(11.0,1.0));
+
+        }
+        logger.info(" CHECK  WAREHOUSE after change pointA : " + warehouse.getTriangles() );
+
+        TriangleComparePerimeter triangleComparePerimeter = new TriangleComparePerimeter();
+
+        for( int i = 0; i< triangles.size()-1; i++) {
+            triangleComparePerimeter.compare(triangles.get(i), triangles.get(i+1));
+        }
     }
 }
