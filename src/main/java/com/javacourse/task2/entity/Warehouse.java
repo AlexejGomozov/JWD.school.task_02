@@ -8,7 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Warehouse {
-    static Logger logger= LogManager.getLogger();
+    static final Logger logger= LogManager.getLogger();
     private static Warehouse instance;
     private Map<Long,TriangleParameters> triangleMap;
 

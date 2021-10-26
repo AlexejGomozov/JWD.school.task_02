@@ -24,7 +24,7 @@ public class ParserDataImpl implements ParserData {
           String line = iterator.next();
             String[] lineAfterSplit = line.split(REGEX_SPLIT);
 
-            int i=0;
+            int i=0;                                          //в этом while если есть невалид элементы
             List<Double> listCoordLokal = new ArrayList<>(); //пропускаем всю строку. т.е валидные значения этой строки не добавляются
             while (i<lineAfterSplit.length) {               //в List, а переходим к след строке
 

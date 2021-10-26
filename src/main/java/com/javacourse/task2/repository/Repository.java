@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 public class Repository {
     static final Logger logger = LogManager.getLogger();
-    private static Repository instance; // = new Repository();
+    private static Repository instance; 
     List<Triangle> triangles ;
 
   private Repository(){

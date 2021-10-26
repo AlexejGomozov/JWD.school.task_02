@@ -1,7 +1,6 @@
 package com.javacourse.task2.repository.impl;
 
 import com.javacourse.task2.entity.Triangle;
-import com.javacourse.task2.exception.TriangleException;
 import com.javacourse.task2.repository.Specification;
 import com.javacourse.task2.service.impl.TriangleServiceImpl;
 

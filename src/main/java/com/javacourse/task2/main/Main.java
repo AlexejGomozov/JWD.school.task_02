@@ -1,5 +1,6 @@
 package com.javacourse.task2.main;
 
+import com.javacourse.task2.comparator.TriangleCompareArea;
 import com.javacourse.task2.comparator.TriangleComparePerimeter;
 import com.javacourse.task2.entity.CustomPoint;
 import com.javacourse.task2.entity.Triangle;
@@ -49,8 +50,8 @@ public class Main {
             }
         }
         PerimeterSpecification perimeterSpecification = new PerimeterSpecification(12.0,16.0);
-    List<Triangle> trianglesAfterSpecification = repository.query(perimeterSpecification);
-    logger.info("Triangles after Perimeter's specification: " + trianglesAfterSpecification);
+        List<Triangle> trianglesAfterSpecification = repository.query(perimeterSpecification);
+        logger.info("Triangles after Perimeter's specification: " + trianglesAfterSpecification);
 
         Triangle selectedTriangleFromRep= repository.getTriangleByIndex(0);
         TriangleParameters selectedTriangleParamFromWareh = warehouse.getParameters(selectedTriangleFromRep.getTriangleId());
@@ -61,20 +62,24 @@ public class Main {
         selectedTriangleFromRep.setPointA(new CustomPoint(2.0,4.0));
 
         logger.info("PointA of triangle " + selectedTriangleFromRep.getTriangleId() + " was changed.");
-       TriangleParameters selectedTriangleParamFromWarehAfterChange = warehouse.getParameters(selectedTriangleFromRep.getTriangleId());
-    logger.info("Selected Parameters of Triangle by ID from warehouse after change: " +
+        TriangleParameters selectedTriangleParamFromWarehAfterChange = warehouse.getParameters(selectedTriangleFromRep.getTriangleId());
+        logger.info("Selected Parameters of Triangle by ID from warehouse after change: " +
             selectedTriangleParamFromWarehAfterChange);
 
         for(Triangle triangle : triangles) {
             triangle.setPointA(new CustomPoint(11.0,1.0));
-
         }
-        logger.info(" CHECK  WAREHOUSE after change pointA : " + warehouse.getTriangles() );
+            logger.info(" CHECK  WAREHOUSE after change pointA : " + warehouse.getTriangles() );
 
-        TriangleComparePerimeter triangleComparePerimeter = new TriangleComparePerimeter();
 
-        for( int i = 0; i< triangles.size()-1; i++) {
-            triangleComparePerimeter.compare(triangles.get(i), triangles.get(i+1));
-        }
+            logger.info ("Repository befor sort " + repository.getTriangles());
+
+            TriangleCompareArea compareArea = new TriangleCompareArea();
+            List<Triangle> afterSortArea = repository.sort(compareArea);
+            logger.info ("Repository after area sort " + afterSortArea);
+
+         TriangleComparePerimeter сomparePerimeter = new TriangleComparePerimeter();
+         List<Triangle> afterSortPerim = repository.sort(сomparePerimeter );
+         logger.info ("Repository after perimeter sort " + afterSortPerim);
     }
 }
