@@ -42,14 +42,12 @@ public class Main {
         for(Triangle triangle : triangles) {
             if (ValidatorDataImpl.getInstance().validTriangle(triangle)) {
                  triangle.attach(observer);
-                if (triangle.getTriangleId()==2) {
-                    triangle.detach(observer);
-                }
+
                repository.addToRep(triangle);
                 warehouse.addToWarehouse(triangle);
             }
         }
-        PerimeterSpecification perimeterSpecification = new PerimeterSpecification(12.0,16.0);
+        PerimeterSpecification perimeterSpecification = new PerimeterSpecification(12.0,17.0);
         List<Triangle> trianglesAfterSpecification = repository.query(perimeterSpecification);
         logger.info("Triangles after Perimeter's specification: " + trianglesAfterSpecification);
 
@@ -59,18 +57,12 @@ public class Main {
         logger.info("Selected Parameters of Triangle by ID from warehouse: "+ selectedTriangleParamFromWareh);
         logger.info("  WAREHOUSE is : " + warehouse.getTriangles() );
 
-        selectedTriangleFromRep.setPointA(new CustomPoint(2.0,4.0));
+        selectedTriangleFromRep.setPointA(new CustomPoint(1.0,4.0));
 
         logger.info("PointA of triangle " + selectedTriangleFromRep.getTriangleId() + " was changed.");
         TriangleParameters selectedTriangleParamFromWarehAfterChange = warehouse.getParameters(selectedTriangleFromRep.getTriangleId());
         logger.info("Selected Parameters of Triangle by ID from warehouse after change: " +
             selectedTriangleParamFromWarehAfterChange);
-
-        for(Triangle triangle : triangles) {
-            triangle.setPointA(new CustomPoint(11.0,1.0));
-        }
-            logger.info(" CHECK  WAREHOUSE after change pointA : " + warehouse.getTriangles() );
-
 
             logger.info ("Repository befor sort " + repository.getTriangles());
 
