@@ -13,6 +13,7 @@ public class TriangleCompareFirstPoint implements Comparator<Triangle> {
             result = -1;
         }else if(firstPoint1 - firstPoint2 > 0){
             result = 1;}
+
         return result;
     }
 

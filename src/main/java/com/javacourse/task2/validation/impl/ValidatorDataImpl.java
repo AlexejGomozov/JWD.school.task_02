@@ -10,10 +10,11 @@ import java.util.regex.Pattern;
 public class ValidatorDataImpl implements ValidatorData {
     private final static String REGEX_DIGIT = "-?\\d\\d*(\\.\\d+)?";
 
-    private static ValidatorDataImpl instance =  new ValidatorDataImpl();
+    private static ValidatorDataImpl instance;
 
     public static ValidatorDataImpl getInstance() {
-        return instance;
+        if(instance == null) {instance = new ValidatorDataImpl();}
+            return instance;
     }
     TriangleServiceImpl triangleServiceImpl = new TriangleServiceImpl();
     @Override

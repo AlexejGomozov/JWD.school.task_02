@@ -24,9 +24,9 @@ public class ParserDataImpl implements ParserData {
           String line = iterator.next();
             String[] lineAfterSplit = line.split(REGEX_SPLIT);
 
-            int i=0;                                          //в этом while если есть невалид элементы
-            List<Double> listCoordLokal = new ArrayList<>(); //пропускаем всю строку. т.е валидные значения этой строки не добавляются
-            while (i<lineAfterSplit.length) {               //в List, а переходим к след строке
+            int i=0;
+            List<Double> listCoordLokal = new ArrayList<>();
+            while (i<lineAfterSplit.length) {
 
                 String strForValid = lineAfterSplit[i];
                 if(strForValid.equals("")){i++; continue;}
@@ -34,7 +34,7 @@ public class ParserDataImpl implements ParserData {
                   if (ValidatorDataImpl.getInstance().validData(strForValid)) {
                       double value = Double.parseDouble(strForValid);
                       listCoordLokal.add(value);
-                  }else break;                                        //переходим к др строке
+                  }else break;
                if(i == lineAfterSplit.length-1) {listAfterParse.addAll(listCoordLokal);}
                i++;
            }

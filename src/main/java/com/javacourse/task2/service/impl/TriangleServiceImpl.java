@@ -43,7 +43,6 @@ public boolean rightTriangle(Triangle triangle){
     public double calculateSide(CustomPoint pointA, CustomPoint pointB) {
         return  Math.sqrt(Math.pow(pointB.getPointAxisX() - pointA.getPointAxisX(), 2) +
                 Math.pow(pointB.getPointAxisY() - pointA.getPointAxisY(), 2));
-
     }
 
     public double[] calculateTriangleSide(Triangle triangle) {

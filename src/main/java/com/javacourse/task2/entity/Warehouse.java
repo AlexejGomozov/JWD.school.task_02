@@ -16,7 +16,7 @@ public class Warehouse {
         this.triangleMap = new HashMap<>();
     }
     public static Warehouse getInstance(){
-        if (instance == null) instance = new Warehouse();
+        if (instance == null) {instance = new Warehouse();}
         return instance;
     }
     public void putParameters(Long triangleId, TriangleParameters value){

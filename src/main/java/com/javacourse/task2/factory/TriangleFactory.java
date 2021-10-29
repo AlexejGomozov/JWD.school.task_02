@@ -16,10 +16,10 @@ public class TriangleFactory {
     private static TriangleFactory instance;
 
     private TriangleFactory() {
-        instance = new TriangleFactory();
     }
 
     public static TriangleFactory getInstance() {
+        if(instance == null) {instance = new TriangleFactory();}
         return instance;
     }
 
